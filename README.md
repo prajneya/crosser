@@ -15,7 +15,7 @@ The score is calculated using the following formula:
 
 Score = Points Accrued - Time taken(in microseconds)/1000<br/>
 Points Accrued = +5 for crossing fixed obstacle<br/>
-             +10 for crossing moving obstacle    
+            &nbsp &nbsp &nbsp  +10 for crossing moving obstacle    
 
 Difficulty level is increased for each player if he/she crosses the entire space without any collision by increasing the speed of moving obstacles.
 
