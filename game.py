@@ -14,6 +14,25 @@ clock = pygame.time.Clock()
 # Keeps track of player's direction
 walkCount = 0
 
+# Reset flags for keeping score
+
+
+def reset():
+    global strip1, strip2, strip3
+    global strip4, strip5
+    global strip1_reached, strip2_reached, strip3_reached
+    global strip4_reached, strip5_reached
+    strip1 = 0
+    strip2 = 0
+    strip3 = 0
+    strip4 = 0
+    strip5 = 0
+    strip1_reached = 0
+    strip2_reached = 0
+    strip3_reached = 0
+    strip4_reached = 0
+    strip5_reached = 0
+
 
 def checkGameEnd():
     global player1, player2, player1_score, player2_score, winner
@@ -191,6 +210,7 @@ def checkCollision():
 
     if x > ship_135x-vel_player1 and x < ship_135x+ship_width+vel_player1:
         if y > ship_1y and y < ship_1y+ship_height:
+            reset()
             player1_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
@@ -198,6 +218,7 @@ def checkCollision():
 
     if x > ship_24x-vel_player1 and x < ship_24x+ship_width+vel_player1:
         if y > ship_2y and y < ship_2y+ship_height:
+            reset()
             player1_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
@@ -205,6 +226,7 @@ def checkCollision():
 
     if x > ship_135x-vel_player1 and x < ship_135x+ship_width+vel_player1:
         if y > ship_3y and y < ship_3y+ship_height:
+            reset()
             player1_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
@@ -212,6 +234,7 @@ def checkCollision():
 
     if x > ship_24x-vel_player1 and x < ship_24x+ship_width+vel_player1:
         if y > ship_4y and y < ship_4y+ship_height:
+            reset()
             player1_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
@@ -219,6 +242,7 @@ def checkCollision():
 
     if x > ship_135x-vel_player1 and x < ship_135x+ship_width+vel_player1:
         if y > ship_5y and y < ship_5y+ship_height:
+            reset()
             player1_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
@@ -226,6 +250,7 @@ def checkCollision():
 
     if x_2 > ship_135x-vel_player2 and x_2 < ship_135x+ship_width+vel_player2:
         if y_2 > ship_1y and y_2 < ship_1y+ship_height:
+            reset()
             player2_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
@@ -233,6 +258,7 @@ def checkCollision():
 
     if x_2 > ship_24x-vel_player2 and x_2 < ship_24x+ship_width+vel_player2:
         if y_2 > ship_2y and y_2 < ship_2y+ship_height:
+            reset()
             player2_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
@@ -240,6 +266,7 @@ def checkCollision():
 
     if x_2 > ship_135x-vel_player2 and x_2 < ship_135x+ship_width+vel_player2:
         if y_2 > ship_3y and y_2 < ship_3y+ship_height:
+            reset()
             player2_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
@@ -247,6 +274,7 @@ def checkCollision():
 
     if x_2 > ship_24x-vel_player2 and x_2 < ship_24x+ship_width+vel_player2:
         if y_2 > ship_4y and y_2 < ship_4y+ship_height:
+            reset()
             player2_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
@@ -254,6 +282,7 @@ def checkCollision():
 
     if x_2 > ship_135x-vel_player2 and x_2 < ship_135x+ship_width+vel_player2:
         if y_2 > ship_5y and y_2 < ship_5y+ship_height:
+            reset()
             player2_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
@@ -261,26 +290,31 @@ def checkCollision():
 
     if y >= 140 and y <= 195:
         if x >= 110 and x <= 195:
+            reset()
             player1_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
             player1 = -1
         if x >= 410 and x <= 495:
+            reset()
             player1_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
             player1 = -1
         if x >= 710 and x <= 795:
+            reset()
             player1_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
             player1 = -1
         if x >= 1010 and x <= 1095:
+            reset()
             player1_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
             player1 = -1
         if x >= 1310 and x <= 1395:
+            reset()
             player1_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
@@ -288,26 +322,31 @@ def checkCollision():
 
     if y >= 480 and y <= 585:
         if x >= 110 and x <= 195:
+            reset()
             player1_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
             player1 = -1
         if x >= 410 and x <= 495:
+            reset()
             player1_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
             player1 = -1
         if x >= 710 and x <= 795:
+            reset()
             player1_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
             player1 = -1
         if x >= 1010 and x <= 1095:
+            reset()
             player1_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
             player1 = -1
         if x >= 1310 and x <= 1395:
+            reset()
             player1_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
@@ -315,26 +354,31 @@ def checkCollision():
 
     if y >= 295 and y <= 385:
         if x >= 26 and x <= 340:
+            reset()
             player1_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
             player1 = -1
         if x >= 560 and x <= 640:
+            reset()
             player1_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
             player1 = -1
         if x >= 860 and x <= 940:
+            reset()
             player1_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
             player1 = -1
         if x >= 1160 and x <= 1240:
+            reset()
             player1_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
             player1 = -1
         if x >= 1460 and x <= 1540:
+            reset()
             player1_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
@@ -342,26 +386,31 @@ def checkCollision():
 
     if y >= 685 and y <= 780:
         if x >= 26 and x <= 340:
+            reset()
             player1_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
             player1 = -1
         if x >= 560 and x <= 640:
+            reset()
             player1_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
             player1 = -1
         if x >= 860 and x <= 940:
+            reset()
             player1_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
             player1 = -1
         if x >= 1160 and x <= 1240:
+            reset()
             player1_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
             player1 = -1
         if x >= 1460 and x <= 1540:
+            reset()
             player1_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
@@ -369,26 +418,31 @@ def checkCollision():
 
     if y_2 >= 140 and y_2 <= 195:
         if x_2 >= 110 and x_2 <= 195:
+            reset()
             player2_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
             player2 = -1
         if x_2 >= 410 and x_2 <= 495:
+            reset()
             player2_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
             player2 = -1
         if x_2 >= 710 and x_2 <= 795:
+            reset()
             player2_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
             player2 = -1
         if x_2 >= 1010 and x_2 <= 1095:
+            reset()
             player2_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
             player2 = -1
         if x_2 >= 1310 and x_2 <= 1395:
+            reset()
             player2_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
@@ -396,26 +450,31 @@ def checkCollision():
 
     if y_2 >= 480 and y_2 <= 585:
         if x_2 >= 110 and x_2 <= 195:
+            reset()
             player2_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
             player2 = -1
         if x_2 >= 410 and x_2 <= 495:
+            reset()
             player2_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
             player2 = -1
         if x_2 >= 710 and x_2 <= 795:
+            reset()
             player2_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
             player2 = -1
         if x_2 >= 1010 and x_2 <= 1095:
+            reset()
             player2_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
             player2 = -1
         if x_2 >= 1310 and x_2 <= 1395:
+            reset()
             player2_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
@@ -423,26 +482,31 @@ def checkCollision():
 
     if y_2 >= 295 and y_2 <= 385:
         if x_2 >= 26 and x_2 <= 340:
+            reset()
             player2_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
             player2 = -1
         if x_2 >= 560 and x_2 <= 640:
+            reset()
             player2_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
             player2 = -1
         if x_2 >= 860 and x_2 <= 940:
+            reset()
             player2_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
             player2 = -1
         if x_2 >= 1160 and x_2 <= 1240:
+            reset()
             player2_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
             player2 = -1
         if x_2 >= 1460 and x_2 <= 1540:
+            reset()
             player2_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
@@ -450,26 +514,31 @@ def checkCollision():
 
     if y_2 >= 685 and y_2 <= 780:
         if x_2 >= 26 and x_2 <= 340:
+            reset()
             player2_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
             player2 = -1
         if x_2 >= 560 and x_2 <= 640:
+            reset()
             player2_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
             player2 = -1
         if x_2 >= 860 and x_2 <= 940:
+            reset()
             player2_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
             player2 = -1
         if x_2 >= 1160 and x_2 <= 1240:
+            reset()
             player2_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
             player2 = -1
         if x_2 >= 1460 and x_2 <= 1540:
+            reset()
             player2_score -= end//1000
             start = pygame.time.get_ticks()
             end = pygame.time.get_ticks()
@@ -552,16 +621,7 @@ def checkScore():
             strip5_reached = 1
 
         if strip5_reached == 1:
-            strip1 = 0
-            strip2 = 0
-            strip3 = 0
-            strip4 = 0
-            strip5 = 0
-            strip1_reached = 0
-            strip2_reached = 0
-            strip3_reached = 0
-            strip4_reached = 0
-            strip5_reached = 0
+            reset()
             vel_player1 += 5
             player1_playing = False
             player2_playing = True
@@ -608,16 +668,7 @@ def checkScore():
             strip5_reached = 1
 
         if strip5_reached == 1:
-            strip1 = 0
-            strip2 = 0
-            strip3 = 0
-            strip4 = 0
-            strip5 = 0
-            strip1_reached = 0
-            strip2_reached = 0
-            strip3_reached = 0
-            strip4_reached = 0
-            strip5_reached = 0
+            reset()
             vel_player2 += 5
             player1_playing = True
             player2_playing = False
