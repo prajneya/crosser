@@ -13,8 +13,8 @@ The game is about two players competing to cross a space filled with pirate ship
 ## Features: 
 The score is calculated using the following formula: 
 
-Score = Points Accrued - Time taken(in microseconds)/1000
-Points Accrued = +5 for crossing fixed obstacle
+Score = Points Accrued - Time taken(in microseconds)/1000<br/>
+Points Accrued = +5 for crossing fixed obstacle<br/>
              +10 for crossing moving obstacle    
 
 Difficulty level is increased for each player if he/she crosses the entire space without any collision by increasing the speed of moving obstacles.
